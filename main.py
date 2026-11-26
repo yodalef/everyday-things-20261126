@@ -4,8 +4,8 @@ LINE2 = "Honestly, both cut out at the exact moment you need them most, and ever
 
 def validated_text() -> str:
     text = LINE1.strip() + "\n" + LINE2.strip()
-    assert 1 <= len(text) <= 400, f"entry must be 1-400 characters, got {len(text)}"
     assert text.count("\n") == 1, "entry must be exactly two lines"
+    assert 1 <= len(text) <= 400, f"two lines must total 1-400 characters, got {len(text)}"
     return text
 
 
